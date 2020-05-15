@@ -2,11 +2,6 @@
 
 namespace Painter.Core
 {
-    public interface IDrawingPrimitive
-    {
-        IEnumerable<Position> GetPositionSequence(int step);
-    }
-
     public class LinePrimitive : IDrawingPrimitive
     {
         private readonly Position @from;
