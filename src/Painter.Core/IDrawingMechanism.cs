@@ -1,9 +1,11 @@
-﻿namespace Painter.Core
+﻿using System.Threading.Tasks;
+
+namespace Painter.Core
 {
     public interface IDrawingMechanism
     {
-        void MoveTo(Position position);
-        void Up();
-        void Down();
+        Task MoveToAsync(Position position);
+        Task UpAsync();
+        Task DownAsync();
     }
 }
