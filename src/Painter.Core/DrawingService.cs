@@ -1,4 +1,6 @@
-﻿namespace Painter.Core
+﻿using System.Threading.Tasks;
+
+namespace Painter.Core
 {
     public class DrawingService : IDrawingService
     {
@@ -9,9 +11,17 @@
             this.drawingMechanism = drawingMechanism;
         }
 
-        public void Draw(params IDrawingPrimitive[] drawingPrimitives)
+        public async Task DrawAsync(params IDrawingPrimitive[] drawingPrimitives)
         {
-            
+            Position? lastPosition = null;
+            foreach (var currentPrimitive in drawingPrimitives)
+            {
+                foreach (var position in currentPrimitive.GetPositionSequence(1))
+                {
+                    await drawingMechanism.MoveToAsync(position);
+                    await Task.Delay(100);
+                }
+            }
         }
     }
 }

@@ -1,7 +1,9 @@
-﻿namespace Painter.Core
+﻿using System.Threading.Tasks;
+
+namespace Painter.Core
 {
     public interface IDrawingService
     {
-        void Draw(params IDrawingPrimitive[] drawingPrimitives);
+        Task DrawAsync(params IDrawingPrimitive[] drawingPrimitives);
     }
 }

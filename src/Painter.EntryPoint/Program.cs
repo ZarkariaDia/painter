@@ -1,4 +1,5 @@
 ﻿using System;
+using Painter.Core;
 using Painter.Visualize;
 
 namespace Painter.EntryPoint
@@ -8,6 +9,17 @@ namespace Painter.EntryPoint
         [STAThread]
         public static void Main(string[] args)
         {
+            StartDemo();
+        }
+
+        private static void StartDemo()
+        {
+            var lines = new IDrawingPrimitive[]
+            {
+                new LinePrimitive(new Position(), new Position())
+            };
+            var service = new DrawingService(null);
+            service.DrawAsync(lines);
         }
 
 

@@ -6,6 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Painter.Core\Painter.Core.csproj" />
     <ProjectReference Include="..\Painter.Visualize\Painter.Visualize.csproj" />
   </ItemGroup>
 
