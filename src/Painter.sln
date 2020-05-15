@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Painter.EntryPoint", "Paint
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Painter.Tests", "Painter.Tests\Painter.Tests.csproj", "{4859C9A7-F3C2-475F-9AB2-988B0C697517}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Painter.Visualize", "Painter.Visualize\Painter.Visualize.csproj", "{A6686BBE-2D59-4412-A889-0A3C809EC70F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -72,5 +74,17 @@ Global
 		{4859C9A7-F3C2-475F-9AB2-988B0C697517}.Release|x64.Build.0 = Release|Any CPU
 		{4859C9A7-F3C2-475F-9AB2-988B0C697517}.Release|x86.ActiveCfg = Release|Any CPU
 		{4859C9A7-F3C2-475F-9AB2-988B0C697517}.Release|x86.Build.0 = Release|Any CPU
+		{A6686BBE-2D59-4412-A889-0A3C809EC70F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6686BBE-2D59-4412-A889-0A3C809EC70F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6686BBE-2D59-4412-A889-0A3C809EC70F}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{A6686BBE-2D59-4412-A889-0A3C809EC70F}.Debug|x64.Build.0 = Debug|Any CPU
+		{A6686BBE-2D59-4412-A889-0A3C809EC70F}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{A6686BBE-2D59-4412-A889-0A3C809EC70F}.Debug|x86.Build.0 = Debug|Any CPU
+		{A6686BBE-2D59-4412-A889-0A3C809EC70F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A6686BBE-2D59-4412-A889-0A3C809EC70F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A6686BBE-2D59-4412-A889-0A3C809EC70F}.Release|x64.ActiveCfg = Release|Any CPU
+		{A6686BBE-2D59-4412-A889-0A3C809EC70F}.Release|x64.Build.0 = Release|Any CPU
+		{A6686BBE-2D59-4412-A889-0A3C809EC70F}.Release|x86.ActiveCfg = Release|Any CPU
+		{A6686BBE-2D59-4412-A889-0A3C809EC70F}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

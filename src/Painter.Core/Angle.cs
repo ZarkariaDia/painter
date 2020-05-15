@@ -2,7 +2,8 @@
 
 namespace Painter.Core
 {
-    public class Class1
+    public struct Angle
     {
+        
     }
 }

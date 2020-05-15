@@ -1,12 +1,15 @@
 ﻿using System;
+using Painter.Visualize;
 
 namespace Painter.EntryPoint
 {
-    class Program
+    public static class Program
     {
-        static void Main(string[] args)
+        [STAThread]
+        public static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
+            new App().Run(new MainWindow());
         }
     }
 }
