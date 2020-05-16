@@ -1,15 +1,20 @@
 ﻿using System;
+using System.Threading;
+using System.Threading.Tasks;
+using System.Windows.Threading;
 using Painter.Core;
 using Painter.Visualize;
+using DispatcherPriority = System.Windows.Threading.DispatcherPriority;
 
 namespace Painter.EntryPoint
 {
-    public static class Program
+    public class Program
     {
         [STAThread]
         public static void Main(string[] args)
         {
-            StartDemo();
+            //StartDemo();
+            StartVisualization();
         }
 
         private static void StartDemo()
@@ -18,7 +23,10 @@ namespace Painter.EntryPoint
             {
                 new LinePrimitive(new Position(), new Position())
             };
-            var service = new DrawingService(null);
+            var service = new DrawingService(new CombinedDrawingMechanism(new []
+            {
+                new VisualDrawingMechanism()
+            }));
             service.DrawAsync(lines);
         }
 
@@ -28,9 +36,13 @@ namespace Painter.EntryPoint
             Console.WriteLine("Hello World!");
         }
 
-        private static void StartVisualization()
+
+        public static void StartVisualization()
         {
-            new App().Run(new MainWindow());
+            var app = new App();
+            var v = new VisualDrawingMechanism();
+            var window = new MainWindow(v);
+            app.Run(window);
         }
 
         private static void StartReal()

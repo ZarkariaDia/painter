@@ -5,8 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Painter.Visualize"
         mc:Ignorable="d"
-        Title="Painter preview" Height="450" Width="680">
-    <Grid>
-
+        Title="Painter preview" Height="680" Width="680" WindowStartupLocation="CenterOwner">
+    <Grid Name="Grid" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+        <Canvas Name="canvas1" Margin="10">
+            <Ellipse Fill="Aqua" Width="100" Height="100"/>
+        </Canvas>
     </Grid>
 </Window>
