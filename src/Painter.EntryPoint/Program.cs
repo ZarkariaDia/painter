@@ -1,48 +1,61 @@
 ﻿using System;
 using System.Threading;
 using System.Threading.Tasks;
-using System.Windows.Threading;
+using System.Windows.Media;
+using Autofac;
 using Painter.Core;
 using Painter.Visualize;
-using DispatcherPriority = System.Windows.Threading.DispatcherPriority;
 
 namespace Painter.EntryPoint
 {
-    public class Program
+    public static class Program
     {
         [STAThread]
-        public static void Main(string[] args)
+        public static async Task Main(string[] args)
         {
-            //StartDemo();
-            StartVisualization();
+            var builder = new ContainerBuilder();
+            builder.RegisterType<DrawingService>().As<IDrawingService>();
+            builder.RegisterType<CombinedDrawingMechanism>().As<IDrawingMechanism>();
+            builder.RegisterInstance(new VisualDrawingMechanism());
+            builder.RegisterType<LoggingDrawingMechanism>().AsSelf();
+            builder.Register(c => new IDrawingMechanism[]
+            {
+                // c.Resolve<DrawingMechanism>(),
+                c.Resolve<VisualDrawingMechanism>(),
+                c.Resolve<LoggingDrawingMechanism>()
+            });
+            builder.Register(c => new DrawingMechanism(null, null));
+            var container = builder.Build();
+
+            var drawingService = container.Resolve<IDrawingService>();
+
+            StartVisualization(container);
+            Thread.Sleep(3000);
+            await StartDemoAsync(drawingService);
+            Console.ReadKey();
         }
 
-        private static void StartDemo()
+        private static async Task StartDemoAsync(IDrawingService drawingService)
         {
             var lines = new IDrawingPrimitive[]
             {
-                new LinePrimitive(new Position(), new Position())
+                new LinePrimitive(new Position(1, 1), new Position(2,2))
             };
-            var service = new DrawingService(new CombinedDrawingMechanism(new []
+            await drawingService.DrawAsync(lines);
+        }
+
+        private static void StartVisualization(IContainer container)
+        {
+            var thread = new Thread(() =>
             {
-                new VisualDrawingMechanism()
-            }));
-            service.DrawAsync(lines);
-        }
+                var app = new App();
+                var window = new MainWindow(container.Resolve<VisualDrawingMechanism>());
+                app.Run(window);
+            });
+            thread.IsBackground = true;
+            thread.SetApartmentState(ApartmentState.STA);
+            thread.Start();
 
-
-        private static void StartLogging()
-        {
-            Console.WriteLine("Hello World!");
-        }
-
-
-        public static void StartVisualization()
-        {
-            var app = new App();
-            var v = new VisualDrawingMechanism();
-            var window = new MainWindow(v);
-            app.Run(window);
         }
 
         private static void StartReal()

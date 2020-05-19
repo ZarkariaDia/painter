@@ -10,4 +10,8 @@
     <ProjectReference Include="..\Painter.Visualize\Painter.Visualize.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Autofac" Version="5.2.0" />
+  </ItemGroup>
+
 </Project>

@@ -13,19 +13,19 @@ namespace Painter.Core
             this.rightServo = rightServo;
         }
 
-        public Task MoveToAsync(Position position)
+        public async Task MoveToAsync(Position position)
         {
-            throw new System.NotImplementedException();
+            // throw new System.NotImplementedException();
         }
 
-        public Task UpAsync()
+        public async Task UpAsync()
         {
-            throw new System.NotImplementedException();
+            // throw new System.NotImplementedException();
         }
 
-        public Task DownAsync()
+        public async Task DownAsync()
         {
-            throw new System.NotImplementedException();
+            // throw new System.NotImplementedException();
         }
     }
 }
