@@ -14,7 +14,7 @@ namespace Painter.Mechanics
 
         public async Task DrawAsync(params IDrawingPrimitive[] drawingPrimitives)
         {
-            Position? lastPosition = null;
+            VectorPosition? lastPosition = null;
             foreach (var currentPrimitive in drawingPrimitives)
             {
                 foreach (var position in currentPrimitive.GetPositionSequence(1))

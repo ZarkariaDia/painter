@@ -4,7 +4,7 @@ namespace Painter.Geometry
 {
     public class BezierPrimitive : IDrawingPrimitive
     {
-        public IEnumerable<Position> GetPositionSequence(int step)
+        public IEnumerable<VectorPosition> GetPositionSequence(int step)
         {
             throw new System.NotImplementedException();
         }

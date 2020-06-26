@@ -14,7 +14,7 @@ namespace Painter.Mechanics
             this.rightServo = rightServo;
         }
 
-        public async Task MoveToAsync(Position position)
+        public async Task MoveToAsync(VectorPosition position)
         {
             // throw new System.NotImplementedException();
         }

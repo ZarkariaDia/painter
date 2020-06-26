@@ -6,7 +6,7 @@ namespace Painter.Mechanics
 {
     public class LoggingDrawingMechanism : IDrawingMechanism
     {
-        public Task MoveToAsync(Position position)
+        public Task MoveToAsync(VectorPosition position)
         {
             Console.WriteLine($"Move to {position}");
             return Task.CompletedTask;

@@ -13,7 +13,7 @@ namespace Painter.Mechanics
             this.drawingMechanisms = drawingMechanisms;
         }
 
-        public Task MoveToAsync(Position position)
+        public Task MoveToAsync(VectorPosition position)
         {
             return Task.WhenAll(drawingMechanisms.Select(m => m.MoveToAsync(position)));
         }

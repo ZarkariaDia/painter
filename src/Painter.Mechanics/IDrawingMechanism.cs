@@ -5,7 +5,7 @@ namespace Painter.Mechanics
 {
     public interface IDrawingMechanism
     {
-        Task MoveToAsync(Position position);
+        Task MoveToAsync(VectorPosition position);
         Task UpAsync();
         Task DownAsync();
     }
