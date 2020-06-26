@@ -1,7 +1,8 @@
 ﻿using System.Threading.Tasks;
 using Painter.Arduino;
+using Painter.Core;
 
-namespace Painter.Core
+namespace Painter.Mechanics
 {
     public class Servo : IServo
     {
@@ -18,9 +19,19 @@ namespace Painter.Core
             this.maxAngle = maxAngle;
         }
 
+        public Angle CurrentAngle { get; }
+
         public Task RotateAsync(Angle angle)
         {
             throw new System.NotImplementedException();
         }
+    }
+
+    public class ServoConfiguration
+    {
+        public int Port { get; set; }
+
+        public Angle MinAngle { get; set; }
+        public Angle MaxAngle { get; set; }
     }
 }

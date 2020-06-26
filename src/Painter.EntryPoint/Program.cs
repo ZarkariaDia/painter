@@ -4,6 +4,8 @@ using System.Threading.Tasks;
 using System.Windows.Media;
 using Autofac;
 using Painter.Core;
+using Painter.Geometry;
+using Painter.Mechanics;
 using Painter.Visualize;
 
 namespace Painter.EntryPoint

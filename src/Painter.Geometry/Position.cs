@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Painter.Core
+namespace Painter.Geometry
 {
     public struct Position
     {

@@ -4,10 +4,12 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <Nullable>enable</Nullable>
     <LangVersion>latest</LangVersion>
+    <RootNamespace>Painter.Mechanics</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="NUnit" Version="3.12.0" />
+    <ProjectReference Include="..\Painter.Arduino\Painter.Arduino.csproj" />
+    <ProjectReference Include="..\Painter.Geometry\Painter.Geometry.csproj" />
   </ItemGroup>
 
 </Project>

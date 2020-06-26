@@ -1,12 +1,9 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
-  </PropertyGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\Painter.Arduino\Painter.Arduino.csproj" />
-    <ProjectReference Include="..\Painter.Geometry\Painter.Geometry.csproj" />
-  </ItemGroup>
+    <PropertyGroup>
+        <TargetFramework>netstandard2.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <LangVersion>latest</LangVersion>
+    </PropertyGroup>
 
 </Project>

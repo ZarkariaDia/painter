@@ -2,6 +2,11 @@
 
 namespace Painter.Core
 {
+    public struct AngleSpan
+    {
+        
+    }
+
     public struct Angle
     {
         private Angle(double degrees)

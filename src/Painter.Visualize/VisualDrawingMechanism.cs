@@ -1,6 +1,8 @@
 ﻿using System.Threading;
 using System.Threading.Tasks;
 using Painter.Core;
+using Painter.Geometry;
+using Painter.Mechanics;
 
 namespace Painter.Visualize
 {

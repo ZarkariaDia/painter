@@ -4,11 +4,13 @@
         <OutputType>WinExe</OutputType>
         <TargetFramework>netcoreapp3.1</TargetFramework>
         <UseWPF>true</UseWPF>
+        <Nullable>enable</Nullable>
+        <LangVersion>latest</LangVersion>
     </PropertyGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\Painter.Core\Painter.Core.csproj" />
       <ProjectReference Include="..\Painter.Geometry\Painter.Geometry.csproj" />
+      <ProjectReference Include="..\Painter.Mechanics\Painter.Mechanics.csproj" />
     </ItemGroup>
 
 </Project>

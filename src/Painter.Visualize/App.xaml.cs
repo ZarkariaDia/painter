@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using Painter.Core;
+using Painter.Geometry;
 
 namespace Painter.Visualize
 {

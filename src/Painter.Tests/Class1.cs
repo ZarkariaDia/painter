@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Painter.Tests
+﻿namespace Painter.Tests
 {
     public class Class1
     {

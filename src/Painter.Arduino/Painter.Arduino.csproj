@@ -2,6 +2,13 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <LangVersion>latest</LangVersion>
   </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Painter.Core\Painter.Core.csproj" />
+    <ProjectReference Include="..\Painter.Geometry\Painter.Geometry.csproj" />
+  </ItemGroup>
 
 </Project>

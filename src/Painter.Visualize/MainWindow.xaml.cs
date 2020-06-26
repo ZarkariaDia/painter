@@ -14,6 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Windows.Threading;
 using Painter.Core;
+using Painter.Geometry;
 
 namespace Painter.Visualize
 {

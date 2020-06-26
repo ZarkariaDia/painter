@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Painter.Core
+namespace Painter.Geometry
 {
     public interface IDrawingPrimitive
     {

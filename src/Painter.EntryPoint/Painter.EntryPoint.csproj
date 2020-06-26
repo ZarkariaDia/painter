@@ -3,10 +3,12 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
+    <Nullable>enable</Nullable>
+    <LangVersion>latest</LangVersion>
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Painter.Core\Painter.Core.csproj" />
+    <ProjectReference Include="..\Painter.Mechanics\Painter.Mechanics.csproj" />
     <ProjectReference Include="..\Painter.Visualize\Painter.Visualize.csproj" />
   </ItemGroup>
 

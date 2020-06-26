@@ -1,6 +1,7 @@
 ﻿using System.Threading.Tasks;
+using Painter.Geometry;
 
-namespace Painter.Core
+namespace Painter.Mechanics
 {
     public interface IDrawingService
     {
